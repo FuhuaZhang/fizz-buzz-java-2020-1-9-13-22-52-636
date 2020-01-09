@@ -12,4 +12,10 @@ class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(1);
         assertEquals(result, String.valueOf(1));
     }
+
+    @Test
+    void should_return_Fizz_if_the_number_is_multiple_of_3() {
+        String result = fizzBuzz.fizzBuzz(3);
+        assertEquals(result, "Fizz");
+    }
 }
