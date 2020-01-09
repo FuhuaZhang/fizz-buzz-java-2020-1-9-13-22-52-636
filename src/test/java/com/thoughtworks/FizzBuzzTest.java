@@ -30,4 +30,10 @@ class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(7);
         assertEquals(result, "Whizz");
     }
+
+    @Test
+    void should_return_FizzBuzz_if_the_number_is_multiple_of_3_and_5() {
+        String result = fizzBuzz.fizzBuzz(15);
+        assertEquals(result, "FizzBuzz");
+    }
 }
