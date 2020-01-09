@@ -36,4 +36,16 @@ class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(15);
         assertEquals(result, "FizzBuzz");
     }
+
+    @Test
+    void should_return_FizzWhizz_if_the_number_is_multiple_of_3_and_7() {
+        String result = fizzBuzz.fizzBuzz(21);
+        assertEquals(result, "FizzWhizz");
+    }
+
+    @Test
+    void should_return_Buzz_whizz_if_the_number_is_multiple_of_5_and_7() {
+        String result = fizzBuzz.fizzBuzz(35);
+        assertEquals(result, "BuzzWhizz");
+    }
 }
