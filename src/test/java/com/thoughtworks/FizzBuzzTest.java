@@ -18,4 +18,16 @@ class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(3);
         assertEquals(result, "Fizz");
     }
+
+    @Test
+    void should_return_Buzz_if_the_number_if_multiple_of_5() {
+        String result = fizzBuzz.fizzBuzz(5);
+        assertEquals(result, "Buzz");
+    }
+
+    @Test
+    void should_return_Whizz_if_the_number_is_multiple_of_7() {
+        String result = fizzBuzz.fizzBuzz(7);
+        assertEquals(result, "Whizz");
+    }
 }
