@@ -10,23 +10,23 @@ public class FizzBuzz {
     }
 
     public String fizzBuzz(int i) {
+        String result = handleSignalDigit(i);
+
+        if(result.equals(""))
+            return String.valueOf(i);
+        else return result;
+    }
+
+    private String handleSignalDigit(int i) {
+        String result = "";
         if (i % 3 == 0){
-            if (i % 5 == 0){
-                if (i % 7 == 0)
-                    return "FizzBuzzWhizz";
-                return "FizzBuzz";
-            }
-            if (i % 7 == 0)
-                return "FizzWhizz";
-            return "Fizz";
+            result += "Fizz";
         }
         if (i % 5 == 0){
-            if (i % 7 == 0)
-                return "BuzzWhizz";
-            return "Buzz";
+            result += "Buzz";
         }
         if (i % 7 == 0)
-            return "Whizz";
-        return String.valueOf(i);
+            result += "Whizz";
+        return result;
     }
 }
