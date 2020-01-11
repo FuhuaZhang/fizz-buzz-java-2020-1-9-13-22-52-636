@@ -1,6 +1,11 @@
 package com.thoughtworks;
 
+
 public class FizzBuzz {
+    enum FizzBuzzWhizzEnum{
+        Fizz, Buzz, Whizz
+    }
+
     public static void main(String[] args) {
         FizzBuzz fizzBuzz = new FizzBuzz();
         for( int i = 0; i < 120; i++) {
@@ -18,7 +23,7 @@ public class FizzBuzz {
     }
 
     private String handleSignalDigit(int i) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         boolean divided3 = i % 3 == 0;
         boolean divided5 = i % 5 == 0;
@@ -26,6 +31,7 @@ public class FizzBuzz {
         boolean contains3 = String.valueOf(i).contains("3");
         boolean contains5 = String.valueOf(i).contains("5");
         boolean contains7 = String.valueOf(i).contains("7");
+
         if (contains7){
             contains5 = false;
             divided5 = false;
@@ -35,16 +41,14 @@ public class FizzBuzz {
             divided3 = false;
         }
         if (contains3)
-            return "Fizz";
+            return FizzBuzzWhizzEnum.Fizz.toString();
 
-        if (divided3){
-            result += "Fizz";
-        }
-        if (divided5){
-            result += "Buzz";
-        }
+        if (divided3)
+            result.append(FizzBuzzWhizzEnum.Fizz);
+        if (divided5)
+            result.append(FizzBuzzWhizzEnum.Buzz);
         if (divided7)
-            result += "Whizz";
-        return result;
+            result.append(FizzBuzzWhizzEnum.Whizz);
+        return result.toString();
     }
 }
