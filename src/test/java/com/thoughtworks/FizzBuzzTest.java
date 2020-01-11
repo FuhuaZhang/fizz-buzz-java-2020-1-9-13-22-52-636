@@ -44,8 +44,8 @@ class FizzBuzzTest {
     }
 
     @Test
-    void should_return_Buzz_whizz_if_the_number_is_multiple_of_5_and_7() {
-        String result = fizzBuzz.fizzBuzz(35);
+    void should_return_Buzz_whizz_if_the_number_is_multiple_of_5_and_7_and_not_contains_3() {
+        String result = fizzBuzz.fizzBuzz(140);
         assertEquals(result, "BuzzWhizz");
     }
 
@@ -53,5 +53,11 @@ class FizzBuzzTest {
     void should_return_FizzBuzz_whizz_if_the_number_is_multiple_of_3_and_5_and_7() {
         String result = fizzBuzz.fizzBuzz(105);
         assertEquals(result, "FizzBuzzWhizz");
+    }
+
+    @Test
+    void should_return_Fizz_given_number_contains_3() {
+        String result = fizzBuzz.fizzBuzz(13);
+        assertEquals(result, "Fizz");
     }
 }

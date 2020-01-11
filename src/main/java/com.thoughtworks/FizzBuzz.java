@@ -19,6 +19,8 @@ public class FizzBuzz {
 
     private String handleSignalDigit(int i) {
         String result = "";
+        if ( String.valueOf(i).contains("3"))
+            return  "Fizz";
         if (i % 3 == 0){
             result += "Fizz";
         }
