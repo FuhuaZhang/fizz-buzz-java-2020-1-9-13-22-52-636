@@ -60,4 +60,10 @@ class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(13);
         assertEquals(result, "Fizz");
     }
+
+    @Test
+    void should_return_BuzzWhizz_when_given_35() {
+         String result = fizzBuzz.fizzBuzz(35);
+         assertEquals(result, "BuzzWhizz");
+    }
 }

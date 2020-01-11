@@ -10,17 +10,20 @@ public class FizzBuzz {
     }
 
     public String fizzBuzz(int i) {
-        if (String.valueOf(i).contains("3"))
-            return "Fizz";
-        if (i % 3 == 0){
-            if (i % 5 == 0){
+        if (!String.valueOf(i).contains("5")) {
+            if (String.valueOf(i).contains("3"))
+                return "Fizz";
+
+            if (i % 3 == 0) {
+                if (i % 5 == 0) {
+                    if (i % 7 == 0)
+                        return "FizzBuzzWhizz";
+                    return "FizzBuzz";
+                }
                 if (i % 7 == 0)
-                    return "FizzBuzzWhizz";
-                return "FizzBuzz";
+                    return "FizzWhizz";
+                return "Fizz";
             }
-            if (i % 7 == 0)
-                return "FizzWhizz";
-            return "Fizz";
         }
         if (i % 5 == 0){
             if (i % 7 == 0)
