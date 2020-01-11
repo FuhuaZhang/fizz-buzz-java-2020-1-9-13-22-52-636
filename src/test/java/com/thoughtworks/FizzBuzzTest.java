@@ -64,7 +64,14 @@ class FizzBuzzTest {
     @Test
     void should_return_BuzzWhizz_given_number_contains_5() {
         int digit = 35;
-        String actual = fizzBuzz.fizzBuzz(35);
+        String actual = fizzBuzz.fizzBuzz(digit);
         assertEquals(actual, "BuzzWhizz");
+    }
+
+    @Test
+    void should_return_Fizz_given_input_is_75_contains_7() {
+        int digit = 75;
+        String actual = fizzBuzz.fizzBuzz(75);
+        assertEquals(actual, "Fizz");
     }
 }
