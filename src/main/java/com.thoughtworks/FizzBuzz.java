@@ -19,31 +19,31 @@ public class FizzBuzz {
 
     private String handleSignalDigit(int i) {
         String result = "";
+
+        boolean divided3 = i % 3 == 0;
+        boolean divided5 = i % 5 == 0;
+        boolean divided7 = i % 7 == 0;
         boolean contains3 = String.valueOf(i).contains("3");
         boolean contains5 = String.valueOf(i).contains("5");
         boolean contains7 = String.valueOf(i).contains("7");
         if (contains7){
-            if (contains3)
-                return "Fizz";
-            else {
-                if (i % 3 == 0){
-                    result += "Fizz";
-                }
-                if (i % 7 == 0)
-                    result += "Whizz";
-                return result;
-            }
+            contains5 = false;
+            divided5 = false;
         }
+        if (contains5){
+            contains3 = false;
+            divided3 = false;
+        }
+        if (contains3)
+            return "Fizz";
 
-        if (!contains5 && contains3)
-            return  "Fizz";
-        if (!contains5 && i % 3 == 0){
+        if (divided3){
             result += "Fizz";
         }
-        if (!contains7 && i % 5 == 0){
+        if (divided5){
             result += "Buzz";
         }
-        if (i % 7 == 0)
+        if (divided7)
             result += "Whizz";
         return result;
     }
